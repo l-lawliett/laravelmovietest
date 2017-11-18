@@ -22,6 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'api'], function() {
   // protected routes here
- Route::resource('movies','Films\FilmsController');
+ Route::resource('films','Films\FilmsController');
 
 });
