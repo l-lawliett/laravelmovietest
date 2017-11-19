@@ -1,12 +1,12 @@
 # laravelmovietest
 
-# To sign in as an Administrator the email is "adminmail@gmail.com"
+To sign in as an Administrator the email is "adminmail@gmail.com"
 
-# The Password "secretkey"
+The Password "secretkey"
 
-# To sign in as regular user the email is "usermail@gmail.com"
+To sign in as regular user the email is "usermail@gmail.com"
 
-# The Password is "secretkey"
+The Password is "secretkey"
 
 
 #Please read and do before you even run the code
