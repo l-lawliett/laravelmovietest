@@ -14,7 +14,6 @@ The Password is "secretkey"
 
 Please ensure Php7.1 is install this is Laravel 5.5 and only supports Php7 and above
 
-Run Composer Install on the directory if the above is install
 
 To start the Project you need to first add the database variables first
 
@@ -33,6 +32,8 @@ If your and Macbook/Windows open up your Terminal/CLI for Mac hold down command 
 For windows in the search bar type cmd and hit enter
 
 Type Terminal and hit Enter
+
+Run Composer Install on the directory if the above is install from the Terminal
 
 Next you type cd in the terminal and it is best to drag the folder onto the terminal hit enter then do as follow
 
