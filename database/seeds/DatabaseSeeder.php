@@ -103,43 +103,7 @@ class FilmsSeeder extends Seeder {
                      'genre_id' => 1,
                      'photo' => 'king-kong.png'
 
-                ),
-                array('name'=>'Planets of the Apes',
-                      'slug'=> 'planets-of-the-apes',
-                      'description'=> 'Monkeys verses humanity',
-                      'release_date'=> '18-Feb-2018',
-                      'rating' => 2,
-                      'ticket_price' => '100',
-                      'country' => 'Sweden',
-                      'user_id' => 1,
-                      'genre_id' => 3,
-                      'photo' => 'planets-of-the-apes.png'
-
-                 ),
-                 array('name'=>'Spartans',
-                       'slug'=> 'spartans',
-                       'description'=> 'Ancient Greek Wars',
-                       'release_date'=> '18-Mar-2018',
-                       'rating' => 4,
-                       'ticket_price' => '170',
-                       'country' => 'United States Of America',
-                       'user_id' => 1,
-                       'genre_id' => 4,
-                       'photo' => 'spartans.png'
-
-                  ),
-                  array('name'=>'The Godfather',
-                        'slug'=> 'the-godfather',
-                        'description'=> 'Mobs life',
-                        'release_date'=> '18-Jun-2018',
-                        'rating' => 1,
-                        'ticket_price' => '80',
-                        'country' => 'United States Of America',
-                        'user_id' => 1,
-                        'genre_id' => 6,
-                        'photo' => 'the-godfather.png'
-
-                   )
+                )
       ));
     }
 
@@ -158,7 +122,7 @@ class CommentsSeeder extends Seeder {
               ),
               array('comments'=>'Love it',
                     'user_id' => 2,
-                    'film_id' => 1,
+                    'film_id' => 2,
                ),
                array('comments'=>'Hate This Shit',
                      'user_id' => 1,

@@ -11,7 +11,10 @@ The Password is "secretkey"
 
 # Please read and do before you even run the code
 
+
 Please ensure Php7.1 is install this is Laravel 5.5 and only supports Php7 and above
+
+Run Composer Install on the directory if the above is install
 
 To start the Project you need to first add the database variables first
 
