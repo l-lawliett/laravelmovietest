@@ -11,17 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'WelcomeController@index')->name('Welcome');
 
 Auth::routes();
-
+Route::get('/films', 'Films\FilmsController@index')->name('Film');
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['prefix' => 'api'], function() {
   // protected routes here
  Route::resource('films','Films\FilmsController');
+
+});
+
+Route::group(['prefix' => 'api'], function() {
+  // protected routes here
+ Route::resource('comments','CommentController');
 
 });

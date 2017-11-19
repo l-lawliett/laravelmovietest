@@ -19,7 +19,7 @@ class CreateFilmsTable extends Migration
             $table->string('slug');
             $table->string('description');
             $table->string('release_date');
-            $table->float('rating');
+            $table->enum('rating', array(1,2,3,4,5));
             $table->decimal('ticket_price');
             $table->string('country');
             $table->integer('user_id')->unsigned();
@@ -28,6 +28,7 @@ class CreateFilmsTable extends Migration
             $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
             $table->string('photo');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

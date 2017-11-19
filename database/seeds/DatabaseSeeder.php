@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersTableSeeder::class);
         $this->call(GenresSeeder::class);
         $this->call(FilmsSeeder::class);
+        $this->call(CommentsSeeder::class);
     }
 }
 
@@ -71,12 +72,12 @@ class FilmsSeeder extends Seeder {
                    'slug'=> 'marry-me-now',
                    'description'=> 'Movie About marriage',
                    'release_date'=> '18-Jan-2018',
-                   'rating' => 4.2,
+                   'rating' => 4,
                    'ticket_price' => '70',
                    'country' => 'United States Of America',
                    'user_id' => 1,
                    'genre_id' => 2,
-                   'photo' => 'marry-me-now'
+                   'photo' => 'marry-me-now.png'
 
               ),
               array('name'=>'The Matrix',
@@ -88,58 +89,82 @@ class FilmsSeeder extends Seeder {
                     'country' => 'United States Of America',
                     'user_id' => 1,
                     'genre_id' => 1,
-                    'photo' => 'the-matrix'
+                    'photo' => 'the-matrix.png'
 
                ),
                array('name'=>'King Kong',
                      'slug'=> 'king-kong',
                      'description'=> 'Giant Monkey Movie',
                      'release_date'=> '18-May-2018',
-                     'rating' => 4.5,
+                     'rating' => 3,
                      'ticket_price' => '50',
                      'country' => 'Brittain',
                      'user_id' => 1,
                      'genre_id' => 1,
-                     'photo' => 'king-kong'
+                     'photo' => 'king-kong.png'
 
                 ),
                 array('name'=>'Planets of the Apes',
                       'slug'=> 'planets-of-the-apes',
                       'description'=> 'Monkeys verses humanity',
                       'release_date'=> '18-Feb-2018',
-                      'rating' => 3.2,
+                      'rating' => 2,
                       'ticket_price' => '100',
                       'country' => 'Sweden',
                       'user_id' => 1,
                       'genre_id' => 3,
-                      'photo' => 'planets-of-the-apes'
+                      'photo' => 'planets-of-the-apes.png'
 
                  ),
                  array('name'=>'Spartans',
                        'slug'=> 'spartans',
                        'description'=> 'Ancient Greek Wars',
                        'release_date'=> '18-Mar-2018',
-                       'rating' => 5,
+                       'rating' => 4,
                        'ticket_price' => '170',
                        'country' => 'United States Of America',
                        'user_id' => 1,
                        'genre_id' => 4,
-                       'photo' => 'spartans'
+                       'photo' => 'spartans.png'
 
                   ),
                   array('name'=>'The Godfather',
                         'slug'=> 'the-godfather',
                         'description'=> 'Mobs life',
                         'release_date'=> '18-Jun-2018',
-                        'rating' => 2.2,
+                        'rating' => 1,
                         'ticket_price' => '80',
                         'country' => 'United States Of America',
                         'user_id' => 1,
                         'genre_id' => 6,
-                        'photo' => 'the-godfather'
+                        'photo' => 'the-godfather.png'
 
                    )
       ));
     }
 
 }
+
+class CommentsSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('comments')->delete();
+
+            DB::table('comments')->insert(array(
+             array('comments'=>'Nice Movie',
+                   'user_id' => 2,
+                   'film_id' => 1,
+              ),
+              array('comments'=>'Love it',
+                    'user_id' => 2,
+                    'film_id' => 1,
+               ),
+               array('comments'=>'Hate This Shit',
+                     'user_id' => 1,
+                     'film_id' => 3,
+                )
+      ));
+    }
+
+  }
